@@ -1,0 +1,496 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F5C009721B96EACE00B89ED3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C009711B96EACE00B89ED3 /* main.m */; };
+		F5C009751B96EACE00B89ED3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C009741B96EACE00B89ED3 /* AppDelegate.m */; };
+		F5C009781B96EACE00B89ED3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C009771B96EACE00B89ED3 /* ViewController.m */; };
+		F5C0097B1B96EACE00B89ED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5C009791B96EACE00B89ED3 /* Main.storyboard */; };
+		F5C0097D1B96EACE00B89ED3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5C0097C1B96EACE00B89ED3 /* Images.xcassets */; };
+		F5C009801B96EACE00B89ED3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5C0097E1B96EACE00B89ED3 /* LaunchScreen.xib */; };
+		F5C0098C1B96EACE00B89ED3 /* AlienInvadersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C0098B1B96EACE00B89ED3 /* AlienInvadersTests.m */; };
+		F5C009971B96EB1A00B89ED3 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C009961B96EB1A00B89ED3 /* GameViewController.m */; };
+		F5C009A71B96ED8800B89ED3 /* backdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = F5C009A31B96ED8800B89ED3 /* backdrop.png */; };
+		F5C009A81B96ED8800B89ED3 /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = F5C009A41B96ED8800B89ED3 /* bullet.png */; };
+		F5C009A91B96ED8800B89ED3 /* enemy01.png in Resources */ = {isa = PBXBuildFile; fileRef = F5C009A51B96ED8800B89ED3 /* enemy01.png */; };
+		F5C009AA1B96ED8800B89ED3 /* ship.png in Resources */ = {isa = PBXBuildFile; fileRef = F5C009A61B96ED8800B89ED3 /* ship.png */; };
+		F5C009AD1B96F58600B89ED3 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C009AC1B96F58600B89ED3 /* Enemy.m */; };
+		F5C009B01B96FFF900B89ED3 /* PlayerBullet.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C009AF1B96FFF900B89ED3 /* PlayerBullet.m */; };
+		F5C009B31B970CFA00B89ED3 /* EnemyBullet.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C009B21B970CFA00B89ED3 /* EnemyBullet.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F5C009861B96EACE00B89ED3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5C009641B96EACD00B89ED3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5C0096B1B96EACE00B89ED3;
+			remoteInfo = AlienInvaders;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F5C0096C1B96EACE00B89ED3 /* AlienInvaders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlienInvaders.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5C009701B96EACE00B89ED3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5C009711B96EACE00B89ED3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F5C009731B96EACE00B89ED3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F5C009741B96EACE00B89ED3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F5C009761B96EACE00B89ED3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F5C009771B96EACE00B89ED3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F5C0097A1B96EACE00B89ED3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F5C0097C1B96EACE00B89ED3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F5C0097F1B96EACE00B89ED3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F5C009851B96EACE00B89ED3 /* AlienInvadersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlienInvadersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5C0098A1B96EACE00B89ED3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5C0098B1B96EACE00B89ED3 /* AlienInvadersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlienInvadersTests.m; sourceTree = "<group>"; };
+		F5C009951B96EB1A00B89ED3 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		F5C009961B96EB1A00B89ED3 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		F5C009A31B96ED8800B89ED3 /* backdrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backdrop.png; sourceTree = "<group>"; };
+		F5C009A41B96ED8800B89ED3 /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet.png; sourceTree = "<group>"; };
+		F5C009A51B96ED8800B89ED3 /* enemy01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemy01.png; sourceTree = "<group>"; };
+		F5C009A61B96ED8800B89ED3 /* ship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ship.png; sourceTree = "<group>"; };
+		F5C009AB1B96F58600B89ED3 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
+		F5C009AC1B96F58600B89ED3 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
+		F5C009AE1B96FFF900B89ED3 /* PlayerBullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerBullet.h; sourceTree = "<group>"; };
+		F5C009AF1B96FFF900B89ED3 /* PlayerBullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerBullet.m; sourceTree = "<group>"; };
+		F5C009B11B970CFA00B89ED3 /* EnemyBullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyBullet.h; sourceTree = "<group>"; };
+		F5C009B21B970CFA00B89ED3 /* EnemyBullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyBullet.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5C009691B96EACE00B89ED3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C009821B96EACE00B89ED3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F5C009631B96EACD00B89ED3 = {
+			isa = PBXGroup;
+			children = (
+				F5C0096E1B96EACE00B89ED3 /* AlienInvaders */,
+				F5C009881B96EACE00B89ED3 /* AlienInvadersTests */,
+				F5C0096D1B96EACE00B89ED3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F5C0096D1B96EACE00B89ED3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5C0096C1B96EACE00B89ED3 /* AlienInvaders.app */,
+				F5C009851B96EACE00B89ED3 /* AlienInvadersTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5C0096E1B96EACE00B89ED3 /* AlienInvaders */ = {
+			isa = PBXGroup;
+			children = (
+				F5C009A11B96ED6E00B89ED3 /* Resources */,
+				F5C009731B96EACE00B89ED3 /* AppDelegate.h */,
+				F5C009741B96EACE00B89ED3 /* AppDelegate.m */,
+				F5C009B11B970CFA00B89ED3 /* EnemyBullet.h */,
+				F5C009B21B970CFA00B89ED3 /* EnemyBullet.m */,
+				F5C009761B96EACE00B89ED3 /* ViewController.h */,
+				F5C009771B96EACE00B89ED3 /* ViewController.m */,
+				F5C009791B96EACE00B89ED3 /* Main.storyboard */,
+				F5C009AE1B96FFF900B89ED3 /* PlayerBullet.h */,
+				F5C009AF1B96FFF900B89ED3 /* PlayerBullet.m */,
+				F5C0097C1B96EACE00B89ED3 /* Images.xcassets */,
+				F5C0097E1B96EACE00B89ED3 /* LaunchScreen.xib */,
+				F5C0096F1B96EACE00B89ED3 /* Supporting Files */,
+				F5C009951B96EB1A00B89ED3 /* GameViewController.h */,
+				F5C009961B96EB1A00B89ED3 /* GameViewController.m */,
+				F5C009AB1B96F58600B89ED3 /* Enemy.h */,
+				F5C009AC1B96F58600B89ED3 /* Enemy.m */,
+			);
+			path = AlienInvaders;
+			sourceTree = "<group>";
+		};
+		F5C0096F1B96EACE00B89ED3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5C009701B96EACE00B89ED3 /* Info.plist */,
+				F5C009711B96EACE00B89ED3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5C009881B96EACE00B89ED3 /* AlienInvadersTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5C0098B1B96EACE00B89ED3 /* AlienInvadersTests.m */,
+				F5C009891B96EACE00B89ED3 /* Supporting Files */,
+			);
+			path = AlienInvadersTests;
+			sourceTree = "<group>";
+		};
+		F5C009891B96EACE00B89ED3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F5C0098A1B96EACE00B89ED3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5C009A11B96ED6E00B89ED3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F5C009A21B96ED8800B89ED3 /* alienImages */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F5C009A21B96ED8800B89ED3 /* alienImages */ = {
+			isa = PBXGroup;
+			children = (
+				F5C009A31B96ED8800B89ED3 /* backdrop.png */,
+				F5C009A41B96ED8800B89ED3 /* bullet.png */,
+				F5C009A51B96ED8800B89ED3 /* enemy01.png */,
+				F5C009A61B96ED8800B89ED3 /* ship.png */,
+			);
+			path = alienImages;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5C0096B1B96EACE00B89ED3 /* AlienInvaders */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5C0098F1B96EACE00B89ED3 /* Build configuration list for PBXNativeTarget "AlienInvaders" */;
+			buildPhases = (
+				F5C009681B96EACE00B89ED3 /* Sources */,
+				F5C009691B96EACE00B89ED3 /* Frameworks */,
+				F5C0096A1B96EACE00B89ED3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlienInvaders;
+			productName = AlienInvaders;
+			productReference = F5C0096C1B96EACE00B89ED3 /* AlienInvaders.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F5C009841B96EACE00B89ED3 /* AlienInvadersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5C009921B96EACE00B89ED3 /* Build configuration list for PBXNativeTarget "AlienInvadersTests" */;
+			buildPhases = (
+				F5C009811B96EACE00B89ED3 /* Sources */,
+				F5C009821B96EACE00B89ED3 /* Frameworks */,
+				F5C009831B96EACE00B89ED3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5C009871B96EACE00B89ED3 /* PBXTargetDependency */,
+			);
+			name = AlienInvadersTests;
+			productName = AlienInvadersTests;
+			productReference = F5C009851B96EACE00B89ED3 /* AlienInvadersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5C009641B96EACD00B89ED3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = jplebre;
+				TargetAttributes = {
+					F5C0096B1B96EACE00B89ED3 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					F5C009841B96EACE00B89ED3 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = F5C0096B1B96EACE00B89ED3;
+					};
+				};
+			};
+			buildConfigurationList = F5C009671B96EACE00B89ED3 /* Build configuration list for PBXProject "AlienInvaders" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5C009631B96EACD00B89ED3;
+			productRefGroup = F5C0096D1B96EACE00B89ED3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5C0096B1B96EACE00B89ED3 /* AlienInvaders */,
+				F5C009841B96EACE00B89ED3 /* AlienInvadersTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5C0096A1B96EACE00B89ED3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5C0097B1B96EACE00B89ED3 /* Main.storyboard in Resources */,
+				F5C009A71B96ED8800B89ED3 /* backdrop.png in Resources */,
+				F5C009A81B96ED8800B89ED3 /* bullet.png in Resources */,
+				F5C009801B96EACE00B89ED3 /* LaunchScreen.xib in Resources */,
+				F5C0097D1B96EACE00B89ED3 /* Images.xcassets in Resources */,
+				F5C009A91B96ED8800B89ED3 /* enemy01.png in Resources */,
+				F5C009AA1B96ED8800B89ED3 /* ship.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C009831B96EACE00B89ED3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5C009681B96EACE00B89ED3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5C009971B96EB1A00B89ED3 /* GameViewController.m in Sources */,
+				F5C009AD1B96F58600B89ED3 /* Enemy.m in Sources */,
+				F5C009B01B96FFF900B89ED3 /* PlayerBullet.m in Sources */,
+				F5C009B31B970CFA00B89ED3 /* EnemyBullet.m in Sources */,
+				F5C009781B96EACE00B89ED3 /* ViewController.m in Sources */,
+				F5C009751B96EACE00B89ED3 /* AppDelegate.m in Sources */,
+				F5C009721B96EACE00B89ED3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5C009811B96EACE00B89ED3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5C0098C1B96EACE00B89ED3 /* AlienInvadersTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5C009871B96EACE00B89ED3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5C0096B1B96EACE00B89ED3 /* AlienInvaders */;
+			targetProxy = F5C009861B96EACE00B89ED3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F5C009791B96EACE00B89ED3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5C0097A1B96EACE00B89ED3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F5C0097E1B96EACE00B89ED3 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5C0097F1B96EACE00B89ED3 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5C0098D1B96EACE00B89ED3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F5C0098E1B96EACE00B89ED3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5C009901B96EACE00B89ED3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AlienInvaders/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jplebre.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F5C009911B96EACE00B89ED3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = AlienInvaders/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jplebre.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F5C009931B96EACE00B89ED3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AlienInvadersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jplebre.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlienInvaders.app/AlienInvaders";
+			};
+			name = Debug;
+		};
+		F5C009941B96EACE00B89ED3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AlienInvadersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jplebre.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlienInvaders.app/AlienInvaders";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5C009671B96EACE00B89ED3 /* Build configuration list for PBXProject "AlienInvaders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5C0098D1B96EACE00B89ED3 /* Debug */,
+				F5C0098E1B96EACE00B89ED3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5C0098F1B96EACE00B89ED3 /* Build configuration list for PBXNativeTarget "AlienInvaders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5C009901B96EACE00B89ED3 /* Debug */,
+				F5C009911B96EACE00B89ED3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5C009921B96EACE00B89ED3 /* Build configuration list for PBXNativeTarget "AlienInvadersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5C009931B96EACE00B89ED3 /* Debug */,
+				F5C009941B96EACE00B89ED3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5C009641B96EACD00B89ED3 /* Project object */;
+}
