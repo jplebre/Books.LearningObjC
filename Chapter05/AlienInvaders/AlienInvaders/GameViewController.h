@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PlayerBullet.h"
+#import "PlayerObject.h"
 #import "Enemy.h"
 
 @interface GameViewController : UIViewController
-@property UIImageView *bulletView;
+@property (strong) NSTimer *moveTimer;
+@property PlayerObject *playerOne;
+@property UIView *playerView;
+@property Enemy *enemies;
 
 - (IBAction)moveLeft:(id)sender;
 - (IBAction)moveRight:(id)sender;

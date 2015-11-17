@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B01B9CEB1BFB6FB10053F563 /* PlayerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B01B9CEA1BFB6FB10053F563 /* PlayerObject.m */; };
 		F5C009721B96EACE00B89ED3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C009711B96EACE00B89ED3 /* main.m */; };
 		F5C009751B96EACE00B89ED3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C009741B96EACE00B89ED3 /* AppDelegate.m */; };
 		F5C009781B96EACE00B89ED3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C009771B96EACE00B89ED3 /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B01B9CE91BFB6FB10053F563 /* PlayerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerObject.h; sourceTree = "<group>"; };
+		B01B9CEA1BFB6FB10053F563 /* PlayerObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerObject.m; sourceTree = "<group>"; };
 		F5C0096C1B96EACE00B89ED3 /* AlienInvaders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlienInvaders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C009701B96EACE00B89ED3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5C009711B96EACE00B89ED3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				F5C009961B96EB1A00B89ED3 /* GameViewController.m */,
 				F5C009AB1B96F58600B89ED3 /* Enemy.h */,
 				F5C009AC1B96F58600B89ED3 /* Enemy.m */,
+				B01B9CE91BFB6FB10053F563 /* PlayerObject.h */,
+				B01B9CEA1BFB6FB10053F563 /* PlayerObject.m */,
 			);
 			path = AlienInvaders;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 				F5C009B01B96FFF900B89ED3 /* PlayerBullet.m in Sources */,
 				F5C009B31B970CFA00B89ED3 /* EnemyBullet.m in Sources */,
 				F5C009781B96EACE00B89ED3 /* ViewController.m in Sources */,
+				B01B9CEB1BFB6FB10053F563 /* PlayerObject.m in Sources */,
 				F5C009751B96EACE00B89ED3 /* AppDelegate.m in Sources */,
 				F5C009721B96EACE00B89ED3 /* main.m in Sources */,
 			);

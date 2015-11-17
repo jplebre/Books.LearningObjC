@@ -10,31 +10,27 @@
 
 @interface GameViewController ()
 
-@property (strong) UIImage *playerImage;
-@property (strong) UIImageView *playerView;
-@property CGRect playerRect;
 
-@property (strong) NSTimer *moveTimer;
 
 @end
 
 @implementation GameViewController
 
+- (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:<#nibNameOrNil#> bundle:<#nibBundleOrNil#>];
+    if (self)
+    {
+        //
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    //Assign the playerImage object an image from directory
-    self.playerImage = [UIImage imageNamed:@"ship.png"];
     
-    //Create an image view with the image object setup above
-    self.playerView = [[UIImageView alloc] initWithImage: self.playerImage];
-    
-    //Set up playerView boundaries, a rectangle to scale the image
-    self.playerRect = CGRectMake(50,550,32,32);
-    self.playerView.frame = self.playerRect;
-    
-    //display the image
-    [self.view addSubview:self.playerView];
+    self.playerOne = [[[PlayerObject alloc]init] initPlayer:self.view];
+    self.playerView = [self.playerOne getPlayerView];
     
     //initialize Enemies
     [[[Enemy alloc] init] initEnemies: self.view];
@@ -59,7 +55,7 @@
     [self releaseTouch];
     
     self.moveTimer = [NSTimer scheduledTimerWithTimeInterval: 0.03
-                                                      target: self
+                                                      target: self.playerOne
                                                     selector: @selector(movePlayerLeft)
                                                     userInfo: nil
                                                      repeats: YES];
@@ -76,7 +72,7 @@
     [self releaseTouch];
     
     self.moveTimer = [NSTimer scheduledTimerWithTimeInterval: 0.03
-                                                      target: self
+                                                      target: self.playerOne
                                                     selector: @selector(movePlayerRight)
                                                     userInfo: nil
                                                      repeats: YES];
