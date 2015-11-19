@@ -10,7 +10,8 @@
 
 @implementation EnemyBullet
 
--(void) fireBullet:(UIView *) gameView:(NSArray *) enemyList{
+-(EnemyBullet *) fireBullet:(UIView *) gameView:(NSArray *) enemyList{
+    self.isActive = true;
     self.gameView = gameView;
     int randomEnemy = (int)random() % (int)enemyList.count;
     UIImageView *enemyView = enemyList[randomEnemy];
@@ -47,6 +48,7 @@
                                                       selector:@selector(moveBullet)
                                                       userInfo:nil
                                                        repeats:YES];
+    return self;
 }
 
 -(void)moveBullet{
@@ -54,6 +56,7 @@
     self.bulletView.frame = self.bulletRect;
     
     if (self.bulletRect.origin.y > 550){
+        self.isActive = false;
         [self.bulletTimer invalidate];
         self.bulletTimer = nil;
         [self.bulletView removeFromSuperview];

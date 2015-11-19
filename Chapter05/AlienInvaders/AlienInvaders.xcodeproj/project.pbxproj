@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B01B9CEB1BFB6FB10053F563 /* PlayerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B01B9CEA1BFB6FB10053F563 /* PlayerObject.m */; };
+		B07D7B311BFD48FA00FCD725 /* enemy02.png in Resources */ = {isa = PBXBuildFile; fileRef = B07D7B2F1BFD48FA00FCD725 /* enemy02.png */; };
+		B07D7B321BFD48FA00FCD725 /* loading.png in Resources */ = {isa = PBXBuildFile; fileRef = B07D7B301BFD48FA00FCD725 /* loading.png */; };
 		F5C009721B96EACE00B89ED3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C009711B96EACE00B89ED3 /* main.m */; };
 		F5C009751B96EACE00B89ED3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C009741B96EACE00B89ED3 /* AppDelegate.m */; };
 		F5C009781B96EACE00B89ED3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5C009771B96EACE00B89ED3 /* ViewController.m */; };
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		B01B9CE91BFB6FB10053F563 /* PlayerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerObject.h; sourceTree = "<group>"; };
 		B01B9CEA1BFB6FB10053F563 /* PlayerObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerObject.m; sourceTree = "<group>"; };
+		B07D7B2F1BFD48FA00FCD725 /* enemy02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enemy02.png; sourceTree = "<group>"; };
+		B07D7B301BFD48FA00FCD725 /* loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading.png; sourceTree = "<group>"; };
 		F5C0096C1B96EACE00B89ED3 /* AlienInvaders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlienInvaders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5C009701B96EACE00B89ED3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5C009711B96EACE00B89ED3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -164,6 +168,8 @@
 		F5C009A21B96ED8800B89ED3 /* alienImages */ = {
 			isa = PBXGroup;
 			children = (
+				B07D7B2F1BFD48FA00FCD725 /* enemy02.png */,
+				B07D7B301BFD48FA00FCD725 /* loading.png */,
 				F5C009A31B96ED8800B89ED3 /* backdrop.png */,
 				F5C009A41B96ED8800B89ED3 /* bullet.png */,
 				F5C009A51B96ED8800B89ED3 /* enemy01.png */,
@@ -252,12 +258,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B07D7B321BFD48FA00FCD725 /* loading.png in Resources */,
 				F5C0097B1B96EACE00B89ED3 /* Main.storyboard in Resources */,
 				F5C009A71B96ED8800B89ED3 /* backdrop.png in Resources */,
 				F5C009A81B96ED8800B89ED3 /* bullet.png in Resources */,
 				F5C009801B96EACE00B89ED3 /* LaunchScreen.xib in Resources */,
 				F5C0097D1B96EACE00B89ED3 /* Images.xcassets in Resources */,
 				F5C009A91B96ED8800B89ED3 /* enemy01.png in Resources */,
+				B07D7B311BFD48FA00FCD725 /* enemy02.png in Resources */,
 				F5C009AA1B96ED8800B89ED3 /* ship.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

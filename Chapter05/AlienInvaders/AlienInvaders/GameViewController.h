@@ -11,10 +11,23 @@
 #import "Enemy.h"
 
 @interface GameViewController : UIViewController
-@property (strong) NSTimer *moveTimer;
+
+@property (atomic, strong) NSTimer *moveTimer;
+@property (atomic, strong) NSTimer *collisionTimer;
 @property PlayerObject *playerOne;
 @property UIView *playerView;
 @property Enemy *enemies;
+@property (strong) UIImageView *loadingView;
+
+enum GAME_STATE{
+    INITIALIZING = 1,
+    PLAYING = 2,
+    RELOADING = 3,
+    ENDING = 4,
+}; typedef enum GAME_STATE GameState;
+
+@property GameState currentState;
+
 
 - (IBAction)moveLeft:(id)sender;
 - (IBAction)moveRight:(id)sender;

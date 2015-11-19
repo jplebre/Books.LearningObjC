@@ -15,7 +15,7 @@ bool goingLeft = false;
 int enemyRows = 5;
 int enemyColumns = 5;
 
--(void) initEnemies:(UIView *)gameView{
+-(Enemy *) initEnemies:(UIView *)gameView{
     self.minXPos = 10;
     self.maxXPos = 278;
     self.gameView = gameView;
@@ -51,20 +51,12 @@ int enemyColumns = 5;
         //display new enemy
         [self.gameView addSubview: enemyView];
     }
-    
-    self.enemyTimer = [NSTimer scheduledTimerWithTimeInterval: 0.03
-                                                       target: self
-                                                     selector: @selector(moveEnemies)
-                                                     userInfo: nil
-                                                      repeats: YES];
-    
-    self.enemyBulletTimer = [NSTimer scheduledTimerWithTimeInterval: 1
-                                                             target: self
-                                                           selector: @selector(dropBomb)
-                                                           userInfo: nil
-                                                            repeats: YES];
-    
+
+    return self;
 }
+
+//----------------------------------------------------------------------------------------------
+
 
 -(void) moveEnemies{
     UIImageView *enemyView = self.enemyList[0];
@@ -93,8 +85,33 @@ int enemyColumns = 5;
 }
 
 -(void) dropBomb{
-    EnemyBullet *newBullet = [[EnemyBullet alloc] init];
-    [newBullet fireBullet: self.gameView: self.enemyList];
+    if(self.enemiesBullet == NULL || self.enemiesBullet.isActive == false){
+        self.enemiesBullet = [[[EnemyBullet alloc] init] fireBullet: self.gameView: self.enemyList];
+    }
+}
+
+//----------------------------------------------------------------------------------------------
+
+-(void) startTimers{
+    self.enemyTimer = [NSTimer scheduledTimerWithTimeInterval: 0.03
+                                                       target: self
+                                                     selector: @selector(moveEnemies)
+                                                     userInfo: nil
+                                                      repeats: YES];
+    
+    self.enemyBulletTimer = [NSTimer scheduledTimerWithTimeInterval: 1
+                                                             target: self
+                                                           selector: @selector(dropBomb)
+                                                           userInfo: nil
+                                                            repeats: YES];
+}
+
+-(void) stopTimers{
+    [self.enemyTimer invalidate];
+    self.enemyTimer = NULL;
+    [self.enemyBulletTimer invalidate];
+    self.enemyBulletTimer = NULL;
+    self.enemiesBullet = NULL;
 }
 
 @end

@@ -10,17 +10,13 @@
 
 @interface GameViewController ()
 
-
-
 @end
 
 @implementation GameViewController
 
-- (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:<#nibNameOrNil#> bundle:<#nibBundleOrNil#>];
-    if (self)
-    {
+- (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self){
         //
     }
     return self;
@@ -28,12 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.playerOne = [[[PlayerObject alloc]init] initPlayer:self.view];
-    self.playerView = [self.playerOne getPlayerView];
-    
-    //initialize Enemies
-    [[[Enemy alloc] init] initEnemies: self.view];
+    [self changeState: INITIALIZING];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,18 +32,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+//--------------------------------------------------------------------------------------
+// Controller
 
 - (IBAction)moveLeft:(id)sender {
     [self releaseTouch];
+    
+    if (self.currentState != PLAYING)
+        return;
     
     self.moveTimer = [NSTimer scheduledTimerWithTimeInterval: 0.03
                                                       target: self.playerOne
@@ -61,28 +49,17 @@
                                                      repeats: YES];
 }
 
-- (void)movePlayerLeft {
-    if(self.playerRect.origin.x >= 10){
-        self.playerRect = CGRectOffset(self.playerRect, -3, 0);
-        self.playerView.frame = self.playerRect;
-    }
-}
-
 - (IBAction)moveRight:(id)sender {
     [self releaseTouch];
+    
+    if (self.currentState != PLAYING)
+        return;
     
     self.moveTimer = [NSTimer scheduledTimerWithTimeInterval: 0.03
                                                       target: self.playerOne
                                                     selector: @selector(movePlayerRight)
                                                     userInfo: nil
                                                      repeats: YES];
-}
-
-- (void)movePlayerRight {
-    if(self.playerRect.origin.x <= 320){
-        self.playerRect = CGRectOffset(self.playerRect, 3, 0);
-        self.playerView.frame = self.playerRect;
-    }
 }
 
 - (IBAction)TouchRelease:(id)sender {
@@ -98,7 +75,90 @@
 }
 
 - (IBAction)fireButton:(id)sender {
-    [[[PlayerBullet alloc] init] fireBullet: self.view: self.playerView];
+    if (self.currentState != PLAYING)
+        return;
+    
+    [self.playerOne fireBullet];
 }
+
+
+//--------------------------------------------------------------------------------------
+// Game states, changing between states
+
+-(void)changeState: (int)newState{
+    switch (newState)
+    {
+        case INITIALIZING:
+            [self loadingScreen];
+            break;
+        case PLAYING:
+            break;
+        case RELOADING:
+            [self.view addSubview:self.loadingView];
+            [self.enemies stopTimers];
+            [self.collisionTimer invalidate];
+            self.collisionTimer = NULL;
+            break;
+        case ENDING:
+            break;
+        default:
+            NSLog(@"GameState not found, integer out of range");
+            break;
+    }
+    self.currentState = newState;
+}
+
+-(void)loadingScreen{
+    self.playerOne = [[[PlayerObject alloc]init] initPlayer:self.view];
+    self.playerView = [self.playerOne getPlayerView];
+    
+    self.enemies = [[[Enemy alloc] init] initEnemies: self.view];
+
+    self.loadingView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"loading.png"]];
+    self.loadingView.frame = self.view.frame;
+    
+    [self.view addSubview:self.loadingView];
+    [NSTimer scheduledTimerWithTimeInterval:2
+                                     target:self
+                                   selector:@selector(closeScreen)
+                                   userInfo:nil
+                                    repeats:NO];
+}
+
+-(void)closeScreen{
+    [self.loadingView removeFromSuperview];
+    [self changeState:PLAYING];
+    [self.enemies startTimers];
+    self.collisionTimer = [NSTimer scheduledTimerWithTimeInterval:0.1
+                                                           target:self
+                                                         selector:@selector(intersectCheck)
+                                                         userInfo:nil
+                                                          repeats:YES];
+}
+
+-(void)endScreen{
+    [self.loadingView removeFromSuperview];
+    [self changeState:ENDING];
+    [self performSegueWithIdentifier:@"unwind" sender:self];
+}
+
+
+//--------------------------------------------------------------------------------------
+// Logic
+
+-(void)intersectCheck{
+    BOOL isConnecting = CGRectIntersectsRect(self.enemies.enemiesBullet.bulletRect, self.playerOne.playerRect);
+    
+    if (isConnecting == true){
+        [NSTimer scheduledTimerWithTimeInterval:2
+                                         target:self
+                                       selector:@selector(endScreen)
+                                       userInfo:nil
+                                        repeats:NO];
+        [self changeState:RELOADING];
+    }
+}
+
+
 
 @end

@@ -7,9 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface PlayerObject : NSObject
-@property (strong) UIImage *playerImage;
+
+@property UIView *gameView;
 @property CGRect playerRect;
+@property (strong) UIImage *playerImage;
+@property (strong) UIImageView *playerView;
+
+- (PlayerObject *) initPlayer:(UIView *) gameView;
+
+-(void) movePlayerRight;
+-(void) movePlayerLeft;
+-(void) fireBullet;
+-(UIView *) getPlayerView;
 
 @end

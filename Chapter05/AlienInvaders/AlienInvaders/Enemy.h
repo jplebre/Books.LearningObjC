@@ -18,9 +18,12 @@
 @property NSMutableArray *enemyList;
 @property NSTimer *enemyTimer;
 @property NSTimer *enemyBulletTimer;
+@property EnemyBullet *enemiesBullet;
 
--(void) initEnemies: (UIView *) gameView;
+-(Enemy *) initEnemies: (UIView *) gameView;
 -(void) moveEnemies;
 -(void) dropBomb;
+-(void) startTimers;
+-(void) stopTimers;
 
 @end

@@ -13,9 +13,9 @@
 @property CGRect bulletRect;
 @property UIImageView *bulletView;
 @property UIView *gameView;
-
+@property BOOL isActive;
 @property (strong) NSTimer *bulletTimer;
 
--(void) fireBullet: (UIView *) gameView: (NSArray *) enemyList;
+-(EnemyBullet *) fireBullet: (UIView *) gameView: (NSArray *) enemyList;
 
 @end
