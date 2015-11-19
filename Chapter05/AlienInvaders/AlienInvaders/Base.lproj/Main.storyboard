@@ -83,6 +83,13 @@
                                     <action selector="fireButton:" destination="Skt-VZ-ONZ" eventType="touchDown" id="aNI-wl-V7r"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCk-SL-1pf">
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                <state key="normal" title="X"/>
+                                <connections>
+                                    <segue destination="2fb-Xm-C1w" kind="unwind" identifier="unwind" unwindAction="unwindToThisViewController:" id="wdM-0l-LrJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -100,6 +107,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GgH-wI-Pit" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="2fb-Xm-C1w" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="947" y="389"/>
         </scene>
